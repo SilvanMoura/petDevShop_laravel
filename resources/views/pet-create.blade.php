@@ -27,6 +27,11 @@
             </div>
 
             <div>
+                <label for="colorPet">Cor:</label>
+                <input type="text" id="colorPet" name="colorPet" placeholder="Cor(es) do animal">
+            </div>
+
+            <div>
                 <label for="kindPet">Qual a espécie?</label>
                 <select name="kindPet" id="kindPet">
                     <option value="dogs">Cachorro</option>

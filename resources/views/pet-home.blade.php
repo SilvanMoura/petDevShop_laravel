@@ -12,6 +12,7 @@
         <div class="item">
             <img src="images/{{$pets->picture}}" class="item--image" />
             <div class="item--name">Raça: {{$pets->breed}}</div>
+            <div class="item--color">Cor: {{$pets->color}}</div>
             <div class="item--color">Idade: {{$pets->age}}</div>
             <div class="item--genre">Gênero: {{$pets->gender}}</div>
         </div>

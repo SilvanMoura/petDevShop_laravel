@@ -54,6 +54,7 @@ class PetsController extends Controller
         }
 
         $adoption->gender = $request->genderPet;
+        $adoption->color = $request->colorPet;
         $adoption->breed = $request->breedPet;
         $adoption->kind = $request->kindPet;
         $adoption->age = ($request->agePet .' '. $request->ageTimePet);

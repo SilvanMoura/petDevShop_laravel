@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("picture", 255);
             $table->string("gender", 50);
             $table->string("breed", 50);
+            $table->string("color", 50);
             $table->string("kind", 50);
             $table->string("age", 50);
             $table->timestamps();
