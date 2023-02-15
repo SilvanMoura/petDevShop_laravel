@@ -19,8 +19,8 @@
         @endforeach
     </div>
 
-    <div class="container">
-        <a href="/newAdoption"><button>Adicionar adoção</button></a>
+    <div class="container-create">
+        <a href="/newAdoption"><button class="btn-add-adoption">Adicionar adoção</button></a>
     </div>
 
     

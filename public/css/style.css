@@ -113,6 +113,28 @@ h2 {
     margin-bottom: 3px;
 }
 
+.container-create{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn-add-adoption{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--main);
+    color: var(--pagebg);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-add-adoption:hover{
+    background-color: #09154d;
+}
+
 footer {
     border-top: 1px solid var(--lighter);
     padding: 20px 0 !important;

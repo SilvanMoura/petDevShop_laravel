@@ -7,7 +7,7 @@
     <h2> disponíveis para adoção</h2>
     
 
-    <div class="container">
+    <div class="container-create">
         <form action="/createAdoption" method="POST" enctype="multipart/form-data">
             @csrf
 
@@ -50,7 +50,7 @@
                 </select>
             </div>
             
-            <input type="submit" value="Criar adoção">
+            <input type="submit" class="btn-add-adoption" value="Criar adoção">
         </form>
     </div>
     
