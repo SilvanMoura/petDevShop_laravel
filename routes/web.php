@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PetsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pet-home');
-});
+Route::get('/', [ PetsController ::class, 'index' ]);
 
-Route::get('/newAdoption', function () {
-    return view('pet-create');
-});
+Route::get('/dogs', [ PetsController ::class, 'dogs' ]);
+
+Route::get('/cats', [ PetsController ::class, 'cats' ]);
+
+Route::get('/fishes', [ PetsController ::class, 'fishes' ]);
+
+Route::get('/search', [ PetsController ::class, 'search' ]);
+
+Route::get('/newAdoption', [ PetsController ::class, 'newAdoption' ]);
+
+Route::post('/createAdoption', [ PetsController ::class, 'createAdoption' ]);

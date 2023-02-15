@@ -8,28 +8,44 @@
     
 
     <div class="container">
-        <form action="/events" method="POST" enctype="multipart/form-data">
+        <form action="/createAdoption" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div>
-                <label for="image">Imagem do Evento:</label>
-                <input type="file" id="image" name="image">
+                <label for="picturePet">Imagem do animal:</label>
+                <input type="file" id="picturePet" name="picturePet">
             </div>
 
             <div>
-                <label for="title">Evento:</label>
-                <input type="text" id="title" name="title" placeholder="Nome do evento">
+                <label for="genderPet">Gênero:</label>
+                <input type="text" id="genderPet" name="genderPet" placeholder="Gênero do animal">
             </div>
 
             <div>
-                <label for="title">O evento é privado?</label>
-                <select name="private" id="private">
-                    <option value="0">Não</option>
-                    <option value="1">Sim</option>
+                <label for="breedPet">Raça:</label>
+                <input type="text" id="breedPet" name="breedPet" placeholder="Raça do animal">
+            </div>
+
+            <div>
+                <label for="kindPet">Qual a espécie?</label>
+                <select name="kindPet" id="kindPet">
+                    <option value="dogs">Cachorro</option>
+                    <option value="cats">Gato</option>
+                    <option value="fishes">Peixe</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="agePet">Idade:</label>
+                <input type="number" id="agePet" name="agePet" placeholder="Idade do animal">
+
+                <select name="ageTimePet" id="ageTimePet">
+                    <option value="Mes(es)">Mes(es)</option>
+                    <option value="Ano(s)">Ano(s)</option>
                 </select>
             </div>
             
-            <input type="submit" value="Criar Evento">
+            <input type="submit" value="Criar adoção">
         </form>
     </div>
     
