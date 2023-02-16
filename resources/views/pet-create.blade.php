@@ -12,28 +12,28 @@
             @csrf
 
             <div>
-                <label for="picturePet">Imagem do animal:</label>
-                <input type="file" id="picturePet" name="picturePet">
+                <label class="create-label" for="picturePet">Imagem do animal:</label>
+                <input class="create-input" type="file" id="picturePet" name="picturePet">
             </div>
 
             <div>
-                <label for="genderPet">Gênero:</label>
-                <input type="text" id="genderPet" name="genderPet" placeholder="Gênero do animal">
+                <label class="create-label" for="genderPet">Gênero:</label>
+                <input class="create-input" type="text" id="genderPet" name="genderPet" placeholder="Gênero do animal">
             </div>
 
             <div>
-                <label for="breedPet">Raça:</label>
-                <input type="text" id="breedPet" name="breedPet" placeholder="Raça do animal">
+                <label class="create-label" for="breedPet">Raça:</label>
+                <input class="create-input" type="text" id="breedPet" name="breedPet" placeholder="Raça do animal">
             </div>
 
             <div>
-                <label for="colorPet">Cor:</label>
-                <input type="text" id="colorPet" name="colorPet" placeholder="Cor(es) do animal">
+                <label class="create-label" for="colorPet">Cor:</label>
+                <input class="create-input" type="text" id="colorPet" name="colorPet" placeholder="Cor(es) do animal">
             </div>
 
             <div>
-                <label for="kindPet">Qual a espécie?</label>
-                <select name="kindPet" id="kindPet">
+                <label class="create-label" for="kindPet">Espécie:</label>
+                <select class="create-select" name="kindPet" id="kindPet">
                     <option value="dogs">Cachorro</option>
                     <option value="cats">Gato</option>
                     <option value="fishes">Peixe</option>
@@ -41,16 +41,19 @@
             </div>
 
             <div>
-                <label for="agePet">Idade:</label>
-                <input type="number" id="agePet" name="agePet" placeholder="Idade do animal">
+                <label class="create-label" for="agePet">Idade:</label>
+                <input class="create-input" type="number" id="agePet" name="agePet" placeholder="Idade do animal">
 
-                <select name="ageTimePet" id="ageTimePet">
+                <select class="create-select" name="ageTimePet" id="ageTimePet">
                     <option value="Mes(es)">Mes(es)</option>
                     <option value="Ano(s)">Ano(s)</option>
                 </select>
             </div>
             
-            <input type="submit" class="btn-add-adoption" value="Criar adoção">
+            <div class="create-btn">
+                <input type="submit" class="btn-add-adoption" value="Criar adoção">
+            </div>
+            
         </form>
     </div>
     
