@@ -28,3 +28,13 @@ Route::get('/search', [ PetsController ::class, 'search' ]);
 Route::get('/newAdoption', [ PetsController ::class, 'newAdoption' ]);
 
 Route::post('/createAdoption', [ PetsController ::class, 'createAdoption' ]);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

@@ -11,9 +11,33 @@
     <header>
         <div class="container">
             <a href="/">PetDevShop</a>
+            
             <form method="GET" action="/search">
                 <input type="search" name="q" placeholder="Pesquise por raça" value="" />
             </form>
+            
+            @auth
+                <a href="/dashboard" class="nav-link">Minhas adoções</a>
+              
+                <form action="/logout" method="POST">
+                  @csrf
+                  <a href="/logout"
+                    class="nav-link"
+                    onclick="event.preventDefault();
+                    this.closest('form').submit();">
+                    Sair
+                  </a>
+                </form>
+            @endauth
+
+
+            @guest
+                <div>
+                    <a class="login" href="/login">Entrar</a>
+                    <a class="register" href="/register">Registrar</a>
+                </div>
+            @endguest
+
         </div>
     </header>
     <nav>

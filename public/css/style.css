@@ -38,6 +38,7 @@ header input {
     width: 100%;
     max-width: 200px;
 }
+
 nav {
     background: var(--main);
     color: var(--darkbg);
@@ -59,6 +60,22 @@ ul li a {
 ul li.active a,
 ul li:hover a {
     background: var(--bglink);
+}
+
+.login, 
+.register,
+.nav-link{
+    color: var(--main);
+    padding: 5px 5px;
+    font-size: 18px;
+}
+
+.login:hover,
+.register:hover,
+.nav-link:hover{
+    border-radius: 10px;
+    color: var(--darkbg);
+    background-color: var(--main);
 }
 
 .banner {
