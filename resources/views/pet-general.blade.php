@@ -17,12 +17,11 @@
             </form>
             
             @auth
-                <a href="/dashboard" class="nav-link">Minhas adoções</a>
+                <a href="/dashboar">Minhas adoções</a>
               
                 <form action="/logout" method="POST">
                   @csrf
                   <a href="/logout"
-                    class="nav-link"
                     onclick="event.preventDefault();
                     this.closest('form').submit();">
                     Sair

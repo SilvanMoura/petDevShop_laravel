@@ -184,7 +184,8 @@ h2 {
     align-items: center;
 }
 
-.btn-add-adoption{
+.btn-add-adoption/* ,
+.btn-view-adoption */{
     width: 250px;
     height: 50px;
     border-radius: 10px;
@@ -194,6 +195,11 @@ h2 {
     cursor: pointer;
     font-size: 15px;
 }
+
+/* .btn-view-adoption{
+    margin-top: 15px;
+    width: 200px;
+} */
 
 .btn-add-adoption:hover{
     background-color: #09154d;

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string("kind", 50);
             $table->string("age", 50);
             $table->timestamps();
+            
         });
     }
 

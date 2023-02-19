@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Adoption;
+//use App\Models\User;
 
 class PetsController extends Controller
 {
@@ -59,9 +60,24 @@ class PetsController extends Controller
         $adoption->kind = $request->kindPet;
         $adoption->age = ($request->agePet .' '. $request->ageTimePet);
 
+        $user = auth()->user();
+        $adoption->user_id = $user->id;
+
         $adoption->save();
 
         return redirect('/');
 
+    }
+
+    /* public function viewAdoption($id) {
+
+        $pet = Adoption::findOrFail($id);
+
+        
+        $petOwner = User::where('id', $pet->user_id)->first()->toArray();
+        
+    } */
+    public function viewAdoption($id){
+        return view('pet-view');
     }
 }

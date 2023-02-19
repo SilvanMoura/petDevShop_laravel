@@ -15,6 +15,7 @@
             <div class="item--color">Cor: {{$pets->color}}</div>
             <div class="item--color">Idade: {{$pets->age}}</div>
             <div class="item--genre">Gênero: {{$pets->gender}}</div>
+            <a href="/viewAdoption/{{$pets->id}}"><button class="btn-view-adoption">Mais detalhes</button></a>
         </div>
         @endforeach
     </div>

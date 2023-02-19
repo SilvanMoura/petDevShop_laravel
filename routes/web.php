@@ -25,7 +25,9 @@ Route::get('/fishes', [ PetsController ::class, 'fishes' ]);
 
 Route::get('/search', [ PetsController ::class, 'search' ]);
 
-Route::get('/newAdoption', [ PetsController ::class, 'newAdoption' ]);
+Route::get('/newAdoption', [ PetsController ::class, 'newAdoption' ])->middleware('auth');
+
+Route::get('/viewAdoption/{id}', [ PetsController ::class, 'viewAdoption' ]);
 
 Route::post('/createAdoption', [ PetsController ::class, 'createAdoption' ]);
 
