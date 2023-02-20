@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Adoption;
-//use App\Models\User;
+use App\Models\User;
 
 class PetsController extends Controller
 {
@@ -33,6 +33,14 @@ class PetsController extends Controller
 
     public function newAdoption(){
         return view('pet-create');
+    }
+
+    public function viewAdoption($id){
+        $pet = Adoption::findOrFail($id);
+        
+        $petOwner = User::where('id', $pet->user_id)->first()->toArray();
+
+        return view('pet-view',['pet' => $pet, 'petOwner' => $petOwner]);
     }
 
     public function createAdoption(Request $request){
@@ -68,16 +76,5 @@ class PetsController extends Controller
         return redirect('/');
 
     }
-
-    /* public function viewAdoption($id) {
-
-        $pet = Adoption::findOrFail($id);
-
-        
-        $petOwner = User::where('id', $pet->user_id)->first()->toArray();
-        
-    } */
-    public function viewAdoption($id){
-        return view('pet-view');
-    }
+    
 }

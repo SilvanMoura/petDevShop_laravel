@@ -60,6 +60,6 @@ class User extends Authenticatable
     ];
 
     public function adoptions() {
-        return $this->hasMany('App/Models\Adoptions');
+        return $this->hasMany('App\Models\Adoption');
     }
 }
