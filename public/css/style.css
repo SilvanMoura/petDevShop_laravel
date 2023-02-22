@@ -103,6 +103,7 @@ h1 {
 
 h1{
     color: var(--lightbg);
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -217,7 +218,6 @@ h1{
 }
 
 .view-left{
-    background-color: red;
     width: 40%;
     height: auto;
 }
@@ -230,7 +230,6 @@ h1{
 }
 
 .view-right{
-    background-color: blue;
     width: 40%;
     height: 450px;
 }
@@ -238,6 +237,14 @@ h1{
 .view-right .view-text{
     font-size: 25px;
     margin: 10px 0;
+}
+
+.view-right input{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(148, 143, 143);
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
