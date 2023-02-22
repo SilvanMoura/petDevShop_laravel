@@ -93,11 +93,17 @@ ul li:hover a {
     margin-bottom: 30px;
 }
 
-h2 {
+h2,
+h1 {
     color: var(--main);
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+}
+
+h1{
+    color: var(--lightbg);
+    margin-bottom: 10px;
 }
 
 .no-list {
@@ -130,7 +136,8 @@ h2 {
     margin-bottom: 3px;
 }
 
-.container-create{
+.container-create,
+.container-view{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,6 +210,34 @@ h2 {
 
 .btn-add-adoption:hover{
     background-color: #09154d;
+}
+
+.container-view{
+    margin-top: 20px;
+}
+
+.view-left{
+    background-color: red;
+    width: 40%;
+    height: auto;
+}
+
+.view-left img{
+    max-width:500px;
+    max-height:450px;
+    width: auto;
+    height: auto;
+}
+
+.view-right{
+    background-color: blue;
+    width: 40%;
+    height: 450px;
+}
+
+.view-right .view-text{
+    font-size: 25px;
+    margin: 10px 0;
 }
 
 footer {
