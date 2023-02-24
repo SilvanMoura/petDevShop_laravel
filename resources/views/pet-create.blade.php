@@ -4,7 +4,7 @@
 
     
     <section class="banner" style="background-image: url('images/banner_cat.jpg')">Todos os animais</section>
-    <h2> disponíveis para adoção</h2>
+    <h2> Cadastrando adoção</h2>
     
 
     <div class="container-create">
@@ -49,11 +49,16 @@
                     <option value="Ano(s)">Ano(s)</option>
                 </select>
             </div>
-            
-            <div class="create-btn">
-                <input type="submit" class="btn-add-adoption" value="Criar adoção">
+
+            <div class="buttons">
+                <div>
+                    <a href="/"><button class="btn-view-adoption">Voltar</button></a>
+                </div>
+                <div>
+                    <input type="submit" class="btn-add-adoption" value="Criar adoção">
+                </div>
+                
             </div>
-            
         </form>
     </div>
     

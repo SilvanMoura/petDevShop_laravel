@@ -4,7 +4,6 @@
 
     
     <div class="container-view">
-        <!-- <div class="view-left" style="background-image: url({{URL::asset('images/acara.jpg')}})">imagem</div> -->
         <div class="view-left">
             <img src="{{URL::asset('images/acara.jpg')}}" class="item--image" />
         </div>
@@ -31,9 +30,13 @@
                 <label class="view-text" class="view-text">Idade:</label>
                 <input class="view-text" type="text" value="{{$pet->age}}" readonly>
             </div>
+
+            <div class="container-view">
+                <a href="/"><button class="btn-view-adoption">Voltar</button></a>
+            </div>
         </div>
         
-
+        
         
         
     </div>

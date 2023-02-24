@@ -11,24 +11,55 @@ class PetsController extends Controller
 {
     public function index(){
         $pets = Adoption::all();
+
+        $template['title'] = "animais";
+        $template['background'] = "allanimals.jpg";
     
-        return view('pet-home',['pets' => $pets]);
+        return view('pet-home',['pets' => $pets, 'template' => $template]);
     }
     
     public function dogs(){
-        
+        $pets = adoption::where([
+            ['kind', 'dogs']
+        ])->get();
+
+        $template['title'] = "cachorros";
+        $template['background'] = "banner_dog.jpg";
+
+        return view('pet-home',['pets' => $pets, 'template' => $template]); 
     }
 
     public function cats(){
         
+        $pets = adoption::where([
+            ['kind', 'cats']
+        ])->get();
+
+        $template['title'] = "gatos";
+        $template['background'] = "banner_cat.jpg";
+
+        return view('pet-home',['pets' => $pets, 'template' => $template]);
     }
 
     public function fishes(){
-        
+        $pets = adoption::where([
+            ['kind', 'fishes']
+        ])->get();
+
+        $template['title'] = "peixes";
+        $template['background'] = "banner_fish.jpg";
+
+        return view('pet-home',['pets' => $pets, 'template' => $template]); 
     }
 
     public function search(){
-        
+        $search = request('search');
+
+        $pets = adoption::where([
+            ['breed', 'like', '%'.$search.'%']
+        ])->get();
+
+        return view('pet-home',['pets' => $pets]); 
     }
 
     public function newAdoption(){

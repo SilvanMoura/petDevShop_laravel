@@ -13,7 +13,7 @@
             <a href="/">PetDevShop</a>
             
             <form method="GET" action="/search">
-                <input type="search" name="q" placeholder="Pesquise por raça" value="" />
+                <input type="search" name="search" placeholder="Pesquise por raça" value="" />
             </form>
             
             @auth

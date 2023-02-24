@@ -186,7 +186,7 @@ h1{
     margin-left: 10px;
 }
 
-.create-btn{
+.buttons{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,11 +202,14 @@ h1{
     color: var(--pagebg);
     cursor: pointer;
     font-size: 15px;
+    margin: 0 10px;
 }
 
 .btn-view-adoption{
     margin-top: 15px;
-    width: 200px;
+    width: 125px;
+    height: 50px;
+    background-color: #636262;
 }
 
 .btn-add-adoption:hover{
