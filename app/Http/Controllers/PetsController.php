@@ -107,5 +107,11 @@ class PetsController extends Controller
         return redirect('/');
 
     }
+
+    public function updateAdoption($id){
+    }
+
+    public function deleteAdoption($id){
+    }
     
 }

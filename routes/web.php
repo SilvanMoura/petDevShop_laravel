@@ -31,6 +31,10 @@ Route::get('/viewAdoption/{id}', [ PetsController ::class, 'viewAdoption' ]);
 
 Route::post('/createAdoption', [ PetsController ::class, 'createAdoption' ]);
 
+Route::get('/updateAdoption/{id}', [ PetsController ::class, 'updateAdoption' ]);
+
+Route::get('/deletedoption/{id}', [ PetsController ::class, 'deleteAdoption' ]);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

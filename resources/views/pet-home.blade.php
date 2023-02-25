@@ -16,6 +16,10 @@
                 <div class="item--color">Idade: {{$pets->age}}</div>
                 <div class="item--genre">Gênero: {{$pets->gender}}</div>
                 <a href="/viewAdoption/{{$pets->id}}"><button class="btn-view-adoption">Mais detalhes</button></a>
+                @auth
+                    <a href="/updateAdoption/{{$pets->id}}" class="actions"> <x-antdesign-edit /> </a>
+                    <a href="/deleteAdoption/{{$pets->id}}" class="actions"> <x-antdesign-delete /> </a> 
+                @endauth
             </div>
             @endforeach
         </div>
@@ -26,7 +30,7 @@
     @endif
 
     <div class="container-create">
-        <a href="/newAdoption"><button class="btn-view-adoption">Adicionar adoção</button></a>
+        <a href="/newAdoption"><button class="btn-add-adoption">Adicionar adoção</button></a>
     </div>
 
     

@@ -3,10 +3,8 @@
 @section('content')
 
     
-    <section class="banner" style="background-image: url('images/banner_cat.jpg')">Todos os animais</section>
-    <h2> Cadastrando adoção</h2>
+    <section class="banner" style="background-image: url('images/allanimals.jpg')">Cadastrando adoção</section>
     
-
     <div class="container-create">
         <form action="/createAdoption" method="POST" enctype="multipart/form-data">
             @csrf
