@@ -112,6 +112,9 @@ class PetsController extends Controller
     }
 
     public function deleteAdoption($id){
+        Adoption::findOrFail($id)->delete();
+
+        return redirect('/');
     }
     
 }
