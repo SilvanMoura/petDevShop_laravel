@@ -17,7 +17,7 @@
                 <div class="item--genre">Gênero: {{$pets->gender}}</div>
                 <a href="/viewAdoption/{{$pets->id}}"><button class="btn-view-adoption">Mais detalhes</button></a>
                 @auth
-                    <a href="/updateAdoption/{{$pets->id}}" class="actions"> <x-antdesign-edit /> </a>
+                    <a href="/formUpdateAdoption/{{$pets->id}}" class="actions"> <x-antdesign-edit /> </a>
                     <a href="/deleteAdoption/{{$pets->id}}" class="actions"> <x-antdesign-delete /> </a> 
                 @endauth
             </div>

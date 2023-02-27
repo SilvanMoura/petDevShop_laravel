@@ -108,7 +108,12 @@ class PetsController extends Controller
 
     }
 
-    public function updateAdoption($id){
+    public function formUpdateAdoption($id){
+        $pet = Adoption::findOrFail($id);
+        
+        $petOwner = User::where('id', $pet->user_id)->first()->toArray();
+
+        return view('pet-update',['pet' => $pet, 'petOwner' => $petOwner]);
     }
 
     public function deleteAdoption($id){

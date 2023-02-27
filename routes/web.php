@@ -31,7 +31,7 @@ Route::get('/viewAdoption/{id}', [ PetsController ::class, 'viewAdoption' ]);
 
 Route::post('/createAdoption', [ PetsController ::class, 'createAdoption' ]);
 
-Route::get('/updateAdoption/{id}', [ PetsController ::class, 'updateAdoption' ]);
+Route::get('/formUpdateAdoption/{id}', [ PetsController ::class, 'formUpdateAdoption' ]);
 
 Route::get('/deleteAdoption/{id}', [ PetsController ::class, 'deleteAdoption' ]);
 
