@@ -13,28 +13,28 @@
 
             <form action="/createAdoption" method="POST" enctype="multipart/form-data">
                 @csrf
-                
-                <div>
+
+                <div class="update-field">
                     <label for="picturePet">Imagem do animal:</label>
                     <input type="file" id="picturePet" name="picturePet">
                 </div>
 
-                <div>
+                <div class="update-field">
                     <label for="genderPet">Gênero:</label>
                     <input type="text" id="genderPet" name="genderPet" placeholder="Gênero do animal" value="{{$pet->gender}}">
                 </div>
 
-                <div>
+                <div class="update-field">
                     <label for="breedPet">Raça:</label>
                     <input type="text" id="breedPet" name="breedPet" placeholder="Raça do animal" value="{{$pet->breed}}">
                 </div>
 
-                <div>
+                <div class="update-field">
                     <label for="colorPet">Cor:</label>
                     <input type="text" id="colorPet" name="colorPet" placeholder="Cor(es) do animal" value="{{$pet->color}}">
                 </div>
 
-                <div>
+                <div class="update-field">
                     <label for="kindPet">Espécie:</label>
                     <select name="kindPet" id="kindPet">
                         <option value="dogs" @if ($pet->kind === 'dogs') selected @endif >Cachorro</option>
@@ -43,7 +43,7 @@
                     </select>
                 </div>
 
-                <div>
+                <div class="update-field">
                     <label for="agePet">Idade:</label>
                     <input type="number" id="agePet" name="agePet" placeholder="Idade do animal" value={{$pet->age}}>
 
@@ -54,15 +54,13 @@
                 </div>
 
                 <div class="buttons">
-                    <div>
-                        <a href="/"><button class="btn-view-adoption">Voltar</button></a>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn-view-adoption">Salvar</button>
-                
-                    </div>
+                    <button type="submit" class="btn-view-adoption">Salvar</button>
                 </div>
             </form>
+            
+            <div class="btn-back">
+                <a href="/"><button class="btn-update-adoption">Voltar</button></a>
+            </div>
 
         </div>
         

@@ -193,7 +193,8 @@ h1{
 }
 
 .btn-add-adoption,
-.btn-view-adoption{
+.btn-view-adoption,
+.btn-update-adoption{
     width: 250px;
     height: 50px;
     border-radius: 10px;
@@ -210,7 +211,8 @@ h1{
 }
 
 .btn-add-adoption:hover,
-.btn-view-adoption:hover{
+.btn-view-adoption:hover,
+.btn-update-adoption:hover{
     background-color: #09154d;
 }
 
@@ -264,6 +266,28 @@ h1{
 .actions:hover{
     background-color: var(--main);
     color: #FFF;
+}
+
+.update-field{
+    margin: 13px 0;
+}
+
+.update-field input{
+    width: 200px;
+    height: 20px;
+}
+
+.update-field select{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.btn-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 }
 
 footer {
