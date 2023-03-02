@@ -17,8 +17,15 @@
                 <div class="item--genre">Gênero: {{$pets->gender}}</div>
                 <a href="/viewAdoption/{{$pets->id}}"><button class="btn-view-adoption">Mais detalhes</button></a>
                 @auth
-                    <a href="/formUpdateAdoption/{{$pets->id}}" class="actions"> <x-antdesign-edit /> </a>
-                    <a href="/deleteAdoption/{{$pets->id}}" class="actions"> <x-antdesign-delete /> </a> 
+                    <div class="actions">
+                        <a href="/formUpdateAdoption/{{$pets->id}}" class="btn-update"> <x-antdesign-edit /> </a>
+                        <form action="/deleteAdoption/{{$pets->id}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn-delete"> <x-antdesign-delete /> </button>
+                        </form>
+                    </div>
+                    
                 @endauth
             </div>
             @endforeach

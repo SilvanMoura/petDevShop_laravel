@@ -251,8 +251,10 @@ h1{
 }
 
 .actions{
-    margin-top: 10px;
-    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 30px;
     height: 30px;
     display: inline-block;
     cursor: pointer;
@@ -260,13 +262,41 @@ h1{
     color: inherit;
     margin: 10px;
     padding: 5px;
+    border-radius: 50%; */
+}
+
+/* .actions:hover{
+    background-color: var(--main);
+    color: #FFF;
+} */
+
+.btn-update{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: inherit;
+    margin: 10px;
+    padding: 5px;
     border-radius: 50%;
 }
 
-.actions:hover{
+.btn-delete{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: inherit;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+}
+
+.btn-update:hover,
+.btn-delete:hover{
     background-color: var(--main);
     color: #FFF;
-}
+} 
 
 .update-field{
     margin: 13px 0;
