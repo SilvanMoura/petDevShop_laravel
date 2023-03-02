@@ -33,7 +33,9 @@ Route::post('/createAdoption', [ PetsController ::class, 'createAdoption' ]);
 
 Route::get('/formUpdateAdoption/{id}', [ PetsController ::class, 'formUpdateAdoption' ]);
 
-Route::get('/deleteAdoption/{id}', [ PetsController ::class, 'deleteAdoption' ]);
+Route::put('/updateAdoption/{id}', [ PetsController ::class, 'updateAdoption' ]);
+
+Route::delete('/deleteAdoption/{id}', [ PetsController ::class, 'deleteAdoption' ]);
 
 Route::middleware([
     'auth:sanctum',

@@ -11,9 +11,9 @@
         <div class="view-right">
             <h1>Atualizando adoção</h1>
 
-            <form action="/createAdoption" method="POST" enctype="multipart/form-data">
+            <form action="/updateAdoption/{{$pet->id}}" method="POST" enctype="multipart/form-data">
                 @csrf
-
+                @method('PUT')
                 <div class="update-field">
                     <label for="picturePet">Imagem do animal:</label>
                     <input type="file" id="picturePet" name="picturePet">

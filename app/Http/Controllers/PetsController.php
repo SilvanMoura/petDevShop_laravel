@@ -116,6 +116,38 @@ class PetsController extends Controller
         return view('pet-update',['pet' => $pet, 'petOwner' => $petOwner]);
     }
 
+    public function updateAdoption($id, Request $request){
+        $adoption = new Adoption;
+
+        // Image Upload
+        if($request->hasFile('picturePet') && $request->file('picturePet')->isValid()) {
+
+            $requestImage = $request->picturePet;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('images'), $imageName);
+
+            $adoption->picture = $imageName;
+
+        }
+
+        $adoption->gender = $request->genderPet;
+        $adoption->color = $request->colorPet;
+        $adoption->breed = $request->breedPet;
+        $adoption->kind = $request->kindPet;
+        $adoption->age = ($request->agePet .' '. $request->ageTimePet);
+
+        $user = auth()->user();
+        $adoption->user_id = $user->id;
+
+        $adoption->save();
+
+        return redirect('/');
+    }
+
     public function deleteAdoption($id){
         Adoption::findOrFail($id)->delete();
 
