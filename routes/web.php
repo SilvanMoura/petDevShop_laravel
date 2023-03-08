@@ -37,6 +37,8 @@ Route::put('/updateAdoption/{id}', [ PetsController ::class, 'updateAdoption' ])
 
 Route::delete('/deleteAdoption/{id}', [ PetsController ::class, 'deleteAdoption' ]);
 
+Route::get('/myAdoptions', [ PetsController ::class, 'myAdoptions' ]);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

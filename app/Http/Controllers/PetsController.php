@@ -153,5 +153,15 @@ class PetsController extends Controller
 
         return redirect('/');
     }
+
+    public function myAdoptions(){
+        $user = auth()->user();
+
+        $pets = adoption::where([
+            ['user_id', $user->id]
+        ])->get();
+        echo($pets);
+        //return view('pet-update',['pet' => $pet, 'petOwner' => $petOwner]);
+    }
     
 }

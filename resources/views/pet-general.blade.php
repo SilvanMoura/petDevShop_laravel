@@ -17,7 +17,7 @@
             </form>
             
             @auth
-                <a class="login" href="/dashboar">Minhas adoções</a>
+                <a class="login" href="/myAdoptions">Minhas adoções</a>
               
                 <form action="/logout" method="POST">
                   @csrf
