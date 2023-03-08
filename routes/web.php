@@ -29,15 +29,15 @@ Route::get('/newAdoption', [ PetsController ::class, 'newAdoption' ])->middlewar
 
 Route::get('/viewAdoption/{id}', [ PetsController ::class, 'viewAdoption' ]);
 
-Route::post('/createAdoption', [ PetsController ::class, 'createAdoption' ]);
+Route::post('/createAdoption', [ PetsController ::class, 'createAdoption' ])->middleware('auth');;
 
-Route::get('/formUpdateAdoption/{id}', [ PetsController ::class, 'formUpdateAdoption' ]);
+Route::get('/formUpdateAdoption/{id}', [ PetsController ::class, 'formUpdateAdoption' ])->middleware('auth');;
 
-Route::put('/updateAdoption/{id}', [ PetsController ::class, 'updateAdoption' ]);
+Route::put('/updateAdoption/{id}', [ PetsController ::class, 'updateAdoption' ])->middleware('auth');;
 
-Route::delete('/deleteAdoption/{id}', [ PetsController ::class, 'deleteAdoption' ]);
+Route::delete('/deleteAdoption/{id}', [ PetsController ::class, 'deleteAdoption' ])->middleware('auth');;
 
-Route::get('/myAdoptions', [ PetsController ::class, 'myAdoptions' ]);
+Route::get('/myAdoptions', [ PetsController ::class, 'myAdoptions' ])->middleware('auth');;
 
 Route::middleware([
     'auth:sanctum',

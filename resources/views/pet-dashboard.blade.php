@@ -30,7 +30,7 @@
             </div>
         @else
             <div class="container no-list">
-                <h2 class="title-dashboard">Não há animais disponíveis nestas condições.</h2>
+                <h2 class="title-dashboard">Você ainda não cadastrou animais para adoção.</h2>
             </div>
         @endif
 

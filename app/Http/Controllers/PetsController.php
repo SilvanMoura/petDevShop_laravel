@@ -14,6 +14,7 @@ class PetsController extends Controller
 
         $template['title'] = "animais";
         $template['background'] = "allanimals.jpg";
+        (auth()->user()) ? $template['userAuth'] = auth()->user()->id : '';
     
         return view('pet-home',['pets' => $pets, 'template' => $template]);
     }
@@ -25,6 +26,7 @@ class PetsController extends Controller
 
         $template['title'] = "cachorros";
         $template['background'] = "banner_dog.jpg";
+        (auth()->user()) ? $template['userAuth'] = auth()->user()->id : '';
 
         return view('pet-home',['pets' => $pets, 'template' => $template]); 
     }
@@ -37,6 +39,7 @@ class PetsController extends Controller
 
         $template['title'] = "gatos";
         $template['background'] = "banner_cat.jpg";
+        (auth()->user()) ? $template['userAuth'] = auth()->user()->id : '';
 
         return view('pet-home',['pets' => $pets, 'template' => $template]);
     }
@@ -48,6 +51,7 @@ class PetsController extends Controller
 
         $template['title'] = "peixes";
         $template['background'] = "banner_fish.jpg";
+        (auth()->user()) ? $template['userAuth'] = auth()->user()->id : '';
 
         return view('pet-home',['pets' => $pets, 'template' => $template]); 
     }

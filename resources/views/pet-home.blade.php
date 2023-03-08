@@ -17,15 +17,16 @@
                 <div class="item--genre">Gênero: {{$pets->gender}}</div>
                 <a href="/viewAdoption/{{$pets->id}}"><button class="btn-view-adoption">Mais detalhes</button></a>
                 @auth
-                    <div class="actions">
-                        <a href="/formUpdateAdoption/{{$pets->id}}" class="btn-update"> <x-antdesign-edit /> </a>
-                        <form action="/deleteAdoption/{{$pets->id}}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn-delete"> <x-antdesign-delete /> </button>
-                        </form>
-                    </div>
-                    
+                    @if ( $pets->user_id == $template['userAuth'] )
+                        <div class="actions">
+                            <a href="/formUpdateAdoption/{{$pets->id}}" class="btn-update"> <x-antdesign-edit /> </a>
+                            <form action="/deleteAdoption/{{$pets->id}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn-delete"> <x-antdesign-delete /> </button>
+                            </form>
+                        </div>
+                    @endif
                 @endauth
             </div>
             @endforeach
