@@ -320,12 +320,20 @@ h1{
     margin-top: 15px;
 }
 
-footer {
+.title-dashboard{
+    margin-top: 20px;
+}
+
+footer{
     border-top: 1px solid var(--lighter);
     padding: 20px 0 !important;
     text-align: center;
     font-size: 16px;
     color: var(--main);
+}
+
+.container-dashboard{
+    height: 90vh;
 }
 
 @media (max-width: 900px) {

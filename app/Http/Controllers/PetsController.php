@@ -160,8 +160,8 @@ class PetsController extends Controller
         $pets = adoption::where([
             ['user_id', $user->id]
         ])->get();
-        echo($pets);
-        //return view('pet-update',['pet' => $pet, 'petOwner' => $petOwner]);
+        
+        return view('pet-dashboard',['pets' => $pets]);
     }
     
 }
