@@ -59,11 +59,14 @@ class PetsController extends Controller
     public function search(){
         $search = request('search');
 
+        $template['title'] = "resultados";
+        $template['background'] = "allanimals.jpg";
+
         $pets = adoption::where([
             ['breed', 'like', '%'.$search.'%']
         ])->get();
 
-        return view('pet-home',['pets' => $pets]); 
+        return view('pet-home',['pets' => $pets, 'template' => $template]);
     }
 
     public function newAdoption(){
