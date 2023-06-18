@@ -254,21 +254,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 30px;
-    height: 30px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 50%; */
 }
-
-/* .actions:hover{
-    background-color: var(--main);
-    color: #FFF;
-} */
 
 .btn-update{
     width: 30px;
@@ -345,6 +331,48 @@ footer{
 @media (max-width: 768px) {
     .list {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttons{
+        flex-direction: column;
+        width: 60vw;
+    }
+
+    .container-view{
+        flex-direction: column;
+        width: 40vw;
+
+    }
+
+    .container-view .view-left .item--image{
+        max-width: 80vw;
+        min-width: 60vw;
+	    height:auto;
+    }
+
+    .view-right{
+        height: auto;
+    }
+
+    .view-right h1{
+        width: 75vw;
+        margin: 20px;
+    }
+
+    .view-right div input{
+        width: 75vw;
+    }
+
+    .view-right .container-view a{
+        width: 30vw;
+        margin: auto;
     }
 }
 
